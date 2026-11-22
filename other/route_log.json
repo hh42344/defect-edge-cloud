@@ -1,0 +1,135 @@
+[
+ {
+  "img": "crazing_1.jpg",
+  "conf": 0.196,
+  "path": "cloud",
+  "edge_ms": 3131.4,
+  "total_ms": 3680.6
+ },
+ {
+  "img": "crazing_11.jpg",
+  "conf": 0.34,
+  "path": "cloud",
+  "edge_ms": 39.1,
+  "total_ms": 365.6
+ },
+ {
+  "img": "crazing_2.jpg",
+  "conf": 0.225,
+  "path": "cloud",
+  "edge_ms": 56.6,
+  "total_ms": 373.6
+ },
+ {
+  "img": "crazing_3.jpg",
+  "conf": 0.332,
+  "path": "cloud",
+  "edge_ms": 38.3,
+  "total_ms": 377.3
+ },
+ {
+  "img": "crazing_5.jpg",
+  "conf": 0.533,
+  "path": "edge",
+  "edge_ms": 40.2,
+  "total_ms": 40.2
+ },
+ {
+  "img": "crazing_6.jpg",
+  "conf": 0.587,
+  "path": "edge",
+  "edge_ms": 38.9,
+  "total_ms": 38.9
+ },
+ {
+  "img": "crazing_7.jpg",
+  "conf": 0.701,
+  "path": "edge",
+  "edge_ms": 38.1,
+  "total_ms": 38.1
+ },
+ {
+  "img": "crazing_8.jpg",
+  "conf": 0.298,
+  "path": "cloud",
+  "edge_ms": 39.0,
+  "total_ms": 371.9
+ },
+ {
+  "img": "crazing_9.jpg",
+  "conf": 0.51,
+  "path": "edge",
+  "edge_ms": 36.5,
+  "total_ms": 36.5
+ },
+ {
+  "img": "patches_11.jpg",
+  "conf": 0.817,
+  "path": "edge",
+  "edge_ms": 35.2,
+  "total_ms": 35.2
+ },
+ {
+  "img": "patches_12.jpg",
+  "conf": 0.807,
+  "path": "edge",
+  "edge_ms": 34.7,
+  "total_ms": 34.7
+ },
+ {
+  "img": "patches_13.jpg",
+  "conf": 0.827,
+  "path": "edge",
+  "edge_ms": 35.2,
+  "total_ms": 35.2
+ },
+ {
+  "img": "patches_2.jpg",
+  "conf": 0.844,
+  "path": "edge",
+  "edge_ms": 34.4,
+  "total_ms": 34.4
+ },
+ {
+  "img": "patches_3.jpg",
+  "conf": 0.841,
+  "path": "edge",
+  "edge_ms": 36.0,
+  "total_ms": 36.0
+ },
+ {
+  "img": "patches_4.jpg",
+  "conf": 0.85,
+  "path": "edge",
+  "edge_ms": 36.8,
+  "total_ms": 36.8
+ },
+ {
+  "img": "patches_5.jpg",
+  "conf": 0.839,
+  "path": "edge",
+  "edge_ms": 34.9,
+  "total_ms": 34.9
+ },
+ {
+  "img": "patches_6.jpg",
+  "conf": 0.812,
+  "path": "edge",
+  "edge_ms": 35.1,
+  "total_ms": 35.1
+ },
+ {
+  "img": "patches_8.jpg",
+  "conf": 0.835,
+  "path": "edge",
+  "edge_ms": 35.1,
+  "total_ms": 35.1
+ },
+ {
+  "img": "patches_9.jpg",
+  "conf": 0.795,
+  "path": "edge",
+  "edge_ms": 34.7,
+  "total_ms": 34.7
+ }
+]

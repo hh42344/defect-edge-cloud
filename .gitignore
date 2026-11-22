@@ -1,0 +1,38 @@
+# ============================================================
+# 只跟踪「人写的、小的、能复现的」
+# ============================================================
+
+# ---------- 运行环境（1.2GB，绝不入库）----------
+.conda_env/
+**/__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ---------- 模型权重与导出（走网盘）----------
+*.pt
+*.pth
+*.onnx
+*.engine
+*.mlpackage
+runs/
+
+# ---------- 数据集原图 ----------
+images/
+
+# ---------- 生成物（能重跑出来）----------
+cache*.json
+*.cache
+*.log
+*.bak
+
+# ---------- 编辑器 ----------
+.vscode/
+.idea/
+
+# ---------- 别人的代码 ----------
+新建文件夹/
+
+# ---------- 保留（不要加规则排除它们）----------
+# tools/  docs/  labels/  results/*.csv  figures/  other/
+# README.md  .gitignore  neu_det.yaml  test_images/
+# models/**/results.csv  models/**/args.yaml
