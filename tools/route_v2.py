@@ -8,7 +8,7 @@
 5. 结果落盘 CSV + 缓存 JSON（供后续精度评估复用）
 
 用法：python route_v2.py
-前提：models/YOLOv9t/yolov9t_best.onnx 与云端模型路径存在
+前提：models/YOLOv10n/yolov10n_best.onnx 与云端模型路径存在
 """
 import csv, json, time
 from pathlib import Path
@@ -16,7 +16,7 @@ import numpy as np
 from ultralytics import YOLO
 
 # ---------------- 配置 ----------------
-EDGE_MODEL = "models/YOLOv9t/yolov9t_best.onnx"   # 边缘端：ONNX + CPU + imgsz 640
+EDGE_MODEL = "models/YOLOv10n/yolov10n_best.onnx"   # 边缘端：ONNX + CPU + imgsz 640
 CLOUD_MODEL = "models/YOLOv8m/yolov8m_best.pt"    # 云端：FP32 + imgsz 960（换 RT-DETR 时改这里）
 TAU_LIST = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
 CLOUD_RTT_MS = 80                                  # 模拟边缘→云网络往返

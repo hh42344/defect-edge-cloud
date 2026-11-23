@@ -19,7 +19,7 @@
 
 用法
     python tools/eval_metrics.py
-    python tools/eval_metrics.py --model models/YOLOv9t/yolov9t_best.onnx --imgsz 640
+    python tools/eval_metrics.py --model models/YOLOv10n/yolov10n_best.onnx --imgsz 640
     python tools/eval_metrics.py --split val --iou 0.5 --conf 0.01
 
 产出
@@ -96,7 +96,7 @@ def match_image(preds, gts, iou_thr: float):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="models/YOLOv9t/yolov9t_best.onnx")
+    ap.add_argument("--model", default="models/YOLOv10n/yolov10n_best.onnx")
     ap.add_argument("--root", default=".")
     ap.add_argument("--split", default="val")
     ap.add_argument("--imgsz", type=int, default=640)
@@ -244,7 +244,7 @@ def main() -> int:
         xs = [r["FPPI"] for r in rows]
         ys = [r["Recall"] for r in rows]
         fig, ax = plt.subplots(figsize=(6.4, 4.8), dpi=150)
-        ax.plot(xs, ys, "-", color="#c0392b", lw=2, label="YOLOv9t (edge)")
+        ax.plot(xs, ys, "-", color="#c0392b", lw=2, label="YOLOv10n (edge)")
         ax.axvline(1.0, ls="--", color="gray", lw=1)
         ax.text(1.02, 0.05, "FPPI = 1.0", color="gray", fontsize=8)
         ax.set_xlabel("FPPI  (false positives per image)")

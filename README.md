@@ -2,7 +2,7 @@
 
 NEU-DET 钢材表面缺陷质检（1800 张，6 类，200×200 灰度）。
 
-**架构一句话**：边缘端轻量检测（YOLOv9t）负责"**别漏**"，云端 ROI 分类复检（ResNet）负责"**别乱报**"，中间用学习型路由分配上云预算。
+**架构一句话**：边缘端轻量检测（YOLOv10n）负责"**别漏**"，云端 ROI 分类复检（ResNet）负责"**别乱报**"，中间用学习型路由分配上云预算。
 
 ---
 
@@ -61,7 +61,7 @@ python tools\box_stats.py
 
 ```powershell
 python tools\eval_metrics.py
-python tools\eval_metrics.py --model models\YOLOv9t\yolov9t_best.onnx --split val
+python tools\eval_metrics.py --model models\YOLOv10n\yolov10n_best.onnx --split val
 ```
 
 产出：
@@ -148,7 +148,7 @@ git clone <仓库地址>
 
 ## 当前的关键数字（2026-11-22）
 
-边缘模型 v9t，验证集 360 张 / 838 个真实缺陷框：
+边缘模型 v10n，验证集 360 张 / 838 个真实缺陷框：
 
 | 工作点 | Recall | FPPI | Precision |
 |---|---|---|---|
