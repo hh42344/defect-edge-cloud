@@ -12,8 +12,6 @@ NEU-DET 钢材表面缺陷质检（1800 张，6 类，200×200 灰度）。
 
 目标：把"边缘低阈值多报 → 路由挑 k 个 → 云端 ROI 分类确认/驳回"这条链跑通，并证明它在同等上云预算下召回更高。
 
-分工见 [docs/分工与任务计划.md](docs/分工与任务计划.md)，术语见 [docs/术语表.md](docs/术语表.md)。
-
 ---
 
 ## 目录结构
@@ -71,7 +69,23 @@ python tools\eval_metrics.py --model models\YOLOv10n\yolov10n_best.onnx --split 
 - `results/metrics_by_class.csv` —— 分类别指标
 - `figures/fig_froc.png`
 
-### 3. 阈值扫参（约 15 分钟）
+### 3. 路由参考基线 —— 预算 vs 召回（约 5 秒）
+
+依赖第 2 步产出的 `cache_v2.json`，**不重跑推理**。
+
+```powershell
+python tools\plot_baseline.py
+```
+
+产出：
+
+- `results/baseline.csv` —— 每档 k × 四种策略（random / conf_asc / conf_desc / oracle）
+- `figures/fig_baseline.png` —— 四条基线曲线
+
+> ⚠️ 当前云端判决由 GT 充当（oracle 假设），曲线为**理论上界**。分类器训练完成后替换判决逻辑即为实测曲线。
+> 详见 [docs/实验_路由基线.md](docs/实验_路由基线.md)
+
+### 4. 阈值扫参（约 15 分钟）
 
 ```powershell
 python tools\route_v2.py
@@ -79,7 +93,7 @@ python tools\route_v2.py
 
 产出：`results/tau_summary.csv`、`results/cache/cache.json`
 
-### 4. 八模型横评（约 1 小时）
+### 5. 八模型横评（约 1 小时）
 
 ```powershell
 python tools\model_compare_v2.py
@@ -87,7 +101,7 @@ python tools\model_compare_v2.py
 
 产出：`results/compare_summary.csv`
 
-### 5. 出图
+### 6. 出图
 
 ```powershell
 python tools\plot_results.py
